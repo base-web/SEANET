@@ -1,0 +1,42 @@
+<div class="text-center block align-middle">
+    <div class="inline-block align-middle  text-center sm:bg-card mt-10 w-80 rounded-2xl shadow">
+
+        <div class="flex flex-col mt-10 align-middle items-center">
+            <img class="w-20" src="../../../assets/wifi-logo.png" alt="">
+            <p class="text-lg">Welcome to SEANET Fast Wi-Fi</p>
+            <button *ngIf="!connect" class="connect" mat-flat-button color="primary" (click)="onConnect()">
+                Connect</button>
+            <div *ngIf="connect" class="flex flex-col">
+                <mat-form-field *ngIf="!phoneNumberEntered" appearance="fill">
+                    <mat-label>Enter youe mobile number</mat-label>
+                    <input matInput placeholder="Phone Number">
+                </mat-form-field>
+                <p *ngIf="phoneNumberEntered && !otpVerified">Successfully OTP send to 8906787168, <span
+                        class="text-blue-600 cursor-pointer">Resend</span></p>
+                <mat-form-field appearance="fill" *ngIf="phoneNumberEntered && !otpVerified">
+                    <mat-label>Enter OTP</mat-label>
+                    <input matInput placeholder="OTP">
+                </mat-form-field>
+
+                <div class="flex flex-col text-center" *ngIf="phoneNumberEntered && otpVerified">
+                    <button mat-flat-button class="free-plan" color="primary">Free Plan - 30 Mins , normal
+                        speed</button>
+                    <button mat-flat-button color="primary">Paid Plan - fast speed</button>
+
+                </div> <button class="rounded-full" *ngIf="!phoneNumberEntered" mat-flat-button [color]="'primary'"
+                    (click)="getOtp()">Get OTP</button>
+                <button *ngIf="phoneNumberEntered && !otpVerified" mat-flat-button [color]="'primary'"
+                    (click)="verifyOtp()">Continue</button>
+            </div>
+            <img class="w-40 mt-4" src="../../../assets/railwire-logo.jpg" alt="">
+            <div class="m-10 flex text-sm flex-col items-center text-center ">
+                <p>By connecting, you agree to the SEANET <a class="text-blue-600 cursor-pointer" href="#">Terms &
+                        Condition</a></p>
+                <p>For any quaries/issues, please email us at <a class="text-blue-600 cursor-pointer"
+                        href="mailto:email@email.com">email@email.com</a></p>
+                <p>For complain <a href="#">click here</a></p>
+            </div>
+        </div>
+
+    </div>
+</div>
