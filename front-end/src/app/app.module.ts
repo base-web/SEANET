@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConnectModule } from './connect/connect.module';
+import { CouponsModule } from './coupons/coupons.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ConnectModule } from './connect/connect.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ConnectModule
+    ConnectModule,
+    CouponsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
