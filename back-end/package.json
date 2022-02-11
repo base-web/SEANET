@@ -4,6 +4,7 @@
   "description": "ISP Management System",
   "main": "index.js",
   "scripts": {
+    "start": "npx nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/base-web/SEANET/issues"
   },
-  "homepage": "https://github.com/base-web/SEANET#readme"
+  "homepage": "https://github.com/base-web/SEANET#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-winston": "^4.2.0",
+    "mongoose": "^6.2.1",
+    "winston": "^3.5.1"
+  }
 }
